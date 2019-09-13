@@ -38,7 +38,7 @@ const broker = new moleculer.ServiceBroker({
 broker.start()
 	.then(() => {
 		console.log('invoker started');
-		setTimeout(() => {
+		setInterval(() => {
 			broker.call('service1.ping')
 				.then((res) => {
 					console.log(res)
